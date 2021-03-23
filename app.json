@@ -1,0 +1,12 @@
+{
+  "name": "plant-care-app",
+  "displayName": "plant-care-app",
+  "expo": {
+    "name": "plant-care-app",
+    "slug": "plant-care-app",
+    "version": "1.0.0",
+    "assetBundlePatterns": [
+      "**/*"
+    ]
+  }
+}
