@@ -1,6 +1,16 @@
 import React, { useState } from "react";
-import { StyleSheet, View, Text, Dimensions, Animated } from "react-native";
+import {
+  StyleSheet,
+  View,
+  Text,
+  Dimensions,
+  Animated,
+  TouchableWithoutFeedback,
+} from "react-native";
 import { ScrollView } from "react-native-gesture-handler";
+import { Icon } from "react-native-eva-icons";
+
+import plus from "../assets/plus-solid.svg";
 
 const { width, height } = Dimensions.get("screen");
 
@@ -45,6 +55,11 @@ const ActionSheet = (props) => {
       ></ScrollView>
       <Text style={styles.heading}>my plants</Text>
       <Text style={styles.subHeading}>you have 8 plants</Text>
+      <TouchableWithoutFeedback onPress={() => alert("Add new plant")}>
+        <View style={styles.add}>
+          <Text style={styles.addText}>Add</Text>
+        </View>
+      </TouchableWithoutFeedback>
     </Animated.View>
   );
 };
@@ -73,7 +88,7 @@ const styles = StyleSheet.create({
   heading: {
     position: "absolute",
     top: 40,
-    left: 20,
+    left: 25,
     fontSize: 38,
     fontWeight: "bold",
     color: "black",
@@ -81,10 +96,28 @@ const styles = StyleSheet.create({
   subHeading: {
     position: "absolute",
     top: 86,
-    left: 20,
+    left: 25,
     fontSize: 15,
     fontWeight: "bold",
     color: "#7b7b7b",
+  },
+  add: {
+    position: "absolute",
+    top: 45,
+    right: 25,
+    fontSize: 15,
+    fontWeight: "bold",
+    color: "#7b7b7b",
+    backgroundColor: "black",
+    display: "flex",
+    height: 60,
+    width: 60,
+    justifyContent: "center",
+    alignItems: "center",
+    borderRadius: 50,
+  },
+  addText: {
+    color: "white",
   },
 });
 
