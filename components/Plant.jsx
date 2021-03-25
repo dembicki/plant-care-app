@@ -8,7 +8,7 @@ import {
 } from "react-native";
 import { TouchableOpacity } from "react-native-gesture-handler";
 
-export default function Plant({ name }) {
+export default function Plant({ name, image }) {
   return (
     <TouchableOpacity
       style={styles.container}
@@ -17,8 +17,7 @@ export default function Plant({ name }) {
       <Image
         style={styles.image}
         source={{
-          uri:
-            "https://external-content.duckduckgo.com/iu/?u=https%3A%2F%2Fcdn.shopify.com%2Fs%2Ffiles%2F1%2F0151%2F1650%2F1046%2Fproducts%2FZamioculcas_zamiifolia_Zanzibar_Gem_14cm_Growers_Pot_2400x.jpg%3Fv%3D1563584100&f=1&nofb=1",
+          uri: image,
         }}
       />
       {/* <Text>{name}</Text> */}
